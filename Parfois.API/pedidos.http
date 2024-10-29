@@ -1,0 +1,48 @@
+GET http://localhost:5123/api/pedido
+
+###
+GET http://localhost:5123/api/pedido/1
+
+### NÃO FUNCIONA
+POST http://localhost:5123/api/pedido
+Content-Type: application/json
+
+{
+    "pedido":"56",
+    "status":"Em espera",
+    "itensAprovados":0,
+    "valorAprovado":0,
+    "itens": [
+        {
+            "descricao": "Item A",
+            "precoUnitario": 10,
+            "qtd": 1
+        },
+        {
+            "descricao": "Item B",
+            "precoUnitario": 5,
+            "qtd": 2
+        }
+    ]
+}
+###
+POST http://localhost:5123/api/pedido
+Content-Type: application/json
+
+{
+    "pedido":9,
+    "status":"Em espera",
+    "itensAprovados":0, 
+    "valorAprovado":0
+}
+
+###
+PUT http://localhost:5123/api/status
+Content-Type: application/json
+
+{
+    "status": "Aprovado",
+    "itensAprovados": 3,
+    "valorAprovado": 20,
+    "pedido": 5
+}

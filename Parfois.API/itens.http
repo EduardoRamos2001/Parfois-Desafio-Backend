@@ -1,0 +1,30 @@
+GET http://localhost:5123/items
+
+###
+GET http://localhost:5123/items/1
+
+###
+POST http://localhost:5123/items
+Content-Type: application/json
+
+{
+    "id_pedido": 1,
+    "descricao": "Item 4 - Novo",
+    "precoUnitario": 44,
+    "qtd": 4
+}
+
+###
+PUT http://localhost:5123/items/1
+Content-Type: application/json
+
+{
+    "id_pedido": 2,
+    "descricao": "Item 1 - Modificado",
+    "precoUnitario": 1.1,
+    "qtd": 5
+}
+
+
+###
+DELETE http://localhost:5123/items/1

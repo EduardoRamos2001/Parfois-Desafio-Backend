@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Parfois.API.props" />
+</Project>
